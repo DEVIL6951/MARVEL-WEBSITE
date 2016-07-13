@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Marvel Movies & Comics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="d.jpg">
+        <!-- Place favicon.ico in the root directory -->
+
+
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/jquery-1.12.2.min.js"></script>
+
+        <script>
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() {
+                $('#slideshow > div:first')
+                    .fadeOut(1000)
+                    .next()
+                    .fadeIn(1000)
+                    .end()
+                    .appendTo('#slideshow');
+            },  3000);
+        </script>
+        <script>
+            function f1() {
+                document.getElementById("active").style.backgroundColor = "red";
+            }
+        </script>
+    </head>
+    <body class="home">
+        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <div id="x">
+            <p>MARVEL MOVIES AND COMICS</p>
+        </div>
+
+        <ul>
+            <li style="color: transparent">ABCDEFGHIJKL</li>
+            <li><img src="img/Marvel-logo-880x660.png"></li>
+            <li><a href="index.html" onclick="f1()" id="active">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="comics.html">Comics</a></li>
+            <li><a href="download.html">Downloads</a></li>
+            <li><a href="tb.html">Ticket Booking</a></li>
+            <li><a href="http://localhost:9090/rating.php">Rating</a></li>
+            <li style="float: right"><a href="Signup.html">SIGN UP</a></li>
+            <li style="float: right"><a href="login.html">LOGIN</a></li>
+        </ul>
+        <br>
+        <br>
+        <div id="slideshow">
+            <div>
+                <img src="img/c1.jpg" height="400" width="800">
+            </div>
+            <div>
+                <img src="img/d1.jpg" height="400" width="800">
+            </div>
+            <div>
+                <img src="img/avengers-age-of-ultron-wallpaper-3.jpg" height="400" width="800">
+            </div>
+        </div>
+    </body>
+</html>
